@@ -5,9 +5,105 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif !important;
+  height: 100vh;
+  background-color: #FAF8F8 !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.Input, .Wall {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  vertical-align:middle;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+}
+
+h1 {
+  font-family: 'Krona One', sans-serif !important;
+  font-size: 3rem !important;
+}
+
+.Wall p {
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+}
+
+.Input .message {
+  font-size: 0.7em !important;
+  width: 50% !important;
+  margin: auto;
+  display: inline-flex;
+  font-weight: 400 !important;
+  background-color: #F3F3F3;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.Input input[type="text"],
+.Input textarea {
+  border: none;
+  height: 4em;
+  width: 60% !important;
+  box-sizing:border-box;
+  margin: auto;
+  padding: 10px;
+  /* padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; */
+  white-space: pre-wrap;
+  resize: none;
+  border-radius: 10px;
+  /* word-wrap: break-word;
+  word-break: break-all;
+  white-space: initial; */
+  height: 80px;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.Input button {
+  margin-top: 20px;
+  border: none;
+  background-color: #FAF8F8 !important;
+  color: none !important;
+}
+
+.Input button img:active {
+  background-color: #5887f3 !important;
+  transition: all .1s ease-out;
+}
+
+button {
+  background-color: none !important;
+}
+
+.Input button img {
+  border-radius: 50%;
+  padding: 0.5em;
+  background-color: #7098F2;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+-webkit-appearance: none;
+  align-items: center;
+}
+
+
+/* img {
+  max-width: 200%;
+  max-height: 200%;
+} */
