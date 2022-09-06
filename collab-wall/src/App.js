@@ -12,7 +12,6 @@ function App() {
         <Route path="/" element={<Wall />} />
         <Route path="/wall" element={<Wall />} />
         <Route path="/input" element={<Input />} />
-        <Route path="/wall" element={<Wall />} />
       </Routes>
     </div>
   );
