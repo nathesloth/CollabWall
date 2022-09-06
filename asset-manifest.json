@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CollabWall/static/css/main.9c536f9c.css",
-    "main.js": "/CollabWall/static/js/main.2d40bf57.js",
-    "static/js/787.84b7f0f3.chunk.js": "/CollabWall/static/js/787.84b7f0f3.chunk.js",
-    "index.html": "/CollabWall/index.html",
-    "main.9c536f9c.css.map": "/CollabWall/static/css/main.9c536f9c.css.map",
-    "main.2d40bf57.js.map": "/CollabWall/static/js/main.2d40bf57.js.map",
-    "787.84b7f0f3.chunk.js.map": "/CollabWall/static/js/787.84b7f0f3.chunk.js.map"
+    "main.css": "/static/css/main.9c536f9c.css",
+    "main.js": "/static/js/main.75972095.js",
+    "static/js/787.84b7f0f3.chunk.js": "/static/js/787.84b7f0f3.chunk.js",
+    "index.html": "/index.html",
+    "main.9c536f9c.css.map": "/static/css/main.9c536f9c.css.map",
+    "main.75972095.js.map": "/static/js/main.75972095.js.map",
+    "787.84b7f0f3.chunk.js.map": "/static/js/787.84b7f0f3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c536f9c.css",
-    "static/js/main.2d40bf57.js"
+    "static/js/main.75972095.js"
   ]
 }
