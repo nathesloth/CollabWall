@@ -111,3 +111,7 @@ circle,
   -ms-user-select: none;
   user-select: none;
 }
+
+.Wall p {
+  background-color: #FAF8F8;
+}
