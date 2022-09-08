@@ -1,7 +1,6 @@
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("containerA");
-  background(220);
 }
 
 function draw() {}
