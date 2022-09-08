@@ -80,9 +80,11 @@ const Input = (props) => {
   console.log(circles);
 
   return (
-    <div className="Input" onClick={addCircle}>
-      <div class="containerA w-100">{circles}</div>
-      <div class="container containerB w-50 m-auto">
+    // <div className="Input" onClick={addCircle}>
+    //   <div class="containerA w-100">{circles}</div>
+    <div className="Input">
+      <div class="containerA w-100" id="containerA"></div>
+      <div class="container containerB w-50 m-auto unselectable">
         <div class="row">
           <div class="col-12">
             <h1>PERSONA</h1>

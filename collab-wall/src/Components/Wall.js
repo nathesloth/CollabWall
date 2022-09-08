@@ -68,7 +68,7 @@ const Wall = (props) => {
           src="sketch.js"
         /> */}
       </div>
-      <div class="container containerB" onLoad={getResponses}>
+      <div class="container containerB unselectable" onLoad={getResponses}>
         <div class="row">
           <div class="col-12">
             <h1>
