@@ -78,14 +78,14 @@ const Wall = (props) => {
         </div>
         <div class="row">
           <div class="col-12">
-            <p>
+            {/* <p>
               We encourage you to leave something behind on this collab wall.
               <br></br>
               This may be a message, words of inspiration or something
               completely random.<br></br>All messages placed will be curated in
               a final collaboration wall at the end of the exhibit.<br></br>Scan
               the QR code and write away!
-            </p>
+            </p> */}
           </div>
           <div>
             {responseList.map((val, key) => {
