@@ -1,18 +1,33 @@
+let img;
+let img2;
+
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent("containerA");
+  img = loadImage("https://i.imgur.com/SMHaUKp.png");
+  img2 = loadImage("https://i.imgur.com/deS49jo.png");
 }
 
-function draw() {}
+function draw() {
+  // image(img, 0, 0);
+}
 
-function mousePressed() {
+function mouseMoved() {
   fill(255, 255, 255, 255);
-  ellipse(mouseX, mouseY, 20, 20);
+  // ellipse(mouseX, mouseY, 50, 50);
+  var value = int(random(1, 3));
+  if (value == 1) {
+    image(img, mouseX - 25, mouseY - 25, 50, 50);
+  }
+  else if (value == 2) {
+    image(img2, mouseX - 25, mouseY - 25, 50, 50);
+  }
+
   console.log("Clicked");
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  canvas.resizeCanvas(windowWidth, windowHeight);
   if (windowHeight > windowWidth) {
     factor = windowHeight;
     factdiv = 1080;

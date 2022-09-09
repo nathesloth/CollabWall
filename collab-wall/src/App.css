@@ -114,4 +114,9 @@ circle,
 
 .Wall p {
   background-color: #FAF8F8;
+  font-weight: 300;
+}
+
+.containerA {
+  filter: blur(2px);
 }
