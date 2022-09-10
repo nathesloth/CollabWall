@@ -88,7 +88,8 @@ circle,
 #script-tag {
   height: 100vh;
   width: 100%;
-  z-index: 1;
+  /* z-index: 1; */
+  z-index: -1;
   position: fixed;
   top: 0;
   left: 0;
@@ -126,4 +127,11 @@ circle,
 .containerB {
   background-color: #FAF8F8;
   box-shadow: 0px 0px 40px 40px #FAF8F8;
+}
+
+.style-select {
+  height: 40px;
+  background-color: pink;
+  width: fit-content;
+  /* vertical-align: middle; */
 }

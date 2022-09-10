@@ -20,8 +20,12 @@ function setup() {
 function draw() {
   // image(img, 0, 0);
   // background('rgba(250,248,248, 0.4)');// to make it gradually disappear
+<<<<<<< Updated upstream
 
   randomStuff();
+=======
+  // randomStuff();
+>>>>>>> Stashed changes
 }
 
 function randomStuff() {
@@ -30,25 +34,46 @@ function randomStuff() {
   if (value == 1) {
     push();
     rotate(PI / int(random(-30, 30)));
-    image(img, int(random(0, windowWidth)), int(random(0, windowHeight)), sizeRandom, sizeRandom);
+    image(
+      img,
+      int(random(0, windowWidth)),
+      int(random(0, windowHeight)),
+      sizeRandom,
+      sizeRandom
+    );
     pop();
-  }
-  else if (value == 2) {
+  } else if (value == 2) {
     push();
     rotate(PI / int(random(-30, 30)));
-    image(img2, int(random(0, windowWidth)), int(random(0, windowHeight)), sizeRandom, sizeRandom);
+    image(
+      img2,
+      int(random(0, windowWidth)),
+      int(random(0, windowHeight)),
+      sizeRandom,
+      sizeRandom
+    );
     pop();
-  }
-  else if (value == 3) {
+  } else if (value == 3) {
     push();
     rotate(PI / int(random(-30, 30)));
-    image(img3, int(random(0, windowWidth)), int(random(0, windowHeight)), sizeRandom, sizeRandom);
+    image(
+      img3,
+      int(random(0, windowWidth)),
+      int(random(0, windowHeight)),
+      sizeRandom,
+      sizeRandom
+    );
     pop();
-  }
-  else if (value == 4) {
+  } else if (value == 4) {
     push();
     rotate(PI / int(random(-30, 30)));
-    image(img4, int(random(0, windowWidth)), int(random(0, windowHeight)), sizeRandom, sizeRandom);
+    image(
+      img4,
+      int(random(0, windowWidth)),
+      int(random(0, windowHeight)),
+      sizeRandom,
+      sizeRandom
+    );
     pop();
   }
   else if (value == 5) {
@@ -67,14 +92,11 @@ function mousePressed() {
   var sizeRandom = int(random(50, 70));
   if (value == 1) {
     image(img, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
-  }
-  else if (value == 2) {
+  } else if (value == 2) {
     image(img2, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
-  }
-  else if (value == 3) {
+  } else if (value == 3) {
     image(img3, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
-  }
-  else if (value == 4) {
+  } else if (value == 4) {
     image(img4, mouseX - 25, mouseY - 25, sizeRandom, sizeRandom);
   }
   else if (value == 5) {

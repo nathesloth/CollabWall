@@ -101,18 +101,26 @@ const Input = (props) => {
         <div class="row">
           <div class="col-12">
             <form onSubmit={handleSubmit}>
-              <textarea
-                name="text"
-                rows="5"
-                cols="10"
-                wrap="soft"
-                spellCheck="true"
-                maxlength="400"
-                value={response}
-                onChange={(event) => {
-                  setResponse(event.target.value);
-                }}
-              ></textarea>
+              <div class="align-middle">
+                <div class="style-select">
+                  <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" />
+                </div>
+                <textarea
+                  name="text"
+                  rows="5"
+                  cols="10"
+                  wrap="soft"
+                  spellCheck="true"
+                  maxlength="400"
+                  value={response}
+                  onChange={(event) => {
+                    setResponse(event.target.value);
+                  }}
+                ></textarea>
+                <div class="style-select">
+                  <img src="https://img.icons8.com/material-rounded/48/000000/chevron-right.png" />
+                </div>
+              </div>
               {/* <input
                 type="text"
                 id="userinput"
