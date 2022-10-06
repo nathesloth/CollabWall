@@ -3,33 +3,51 @@ import "../index.css";
 import React from "react";
 import { useState } from "react";
 import Axios from "axios";
-import styled from "styled-components";
 import {
-  Rectangle,
-  Circle,
-  Ellipse,
-  Line,
-  Polyline,
-  CornerBox,
-  Triangle,
-} from "react-shapes";
+  BrowserRouter as Router,
+  Link,
+} from "react-router-dom";
+
+function setNone() {
+  document.getElementById("hello").style.height = "100px";
+}
+
+function setiMessage() {
+
+}
+
+function setNote() {
+
+}
+
+function setInsta() {
+
+}
+
 
 const Input = (props) => {
   const [response, setResponse] = useState("");
   const [responseList, setResponseList] = useState([]);
-  const [circles, setCircles] = useState([]);
+
+  // const addResponse = () => {
+  //   Axios.post("http://localhost:3002/api/insert", {
+  //     response: response,
+  //   }).then(() => {
+  //     console.log("success");
+  //   });
+  // };
+
+  // const getResponses = () => {
+  //   Axios.get("http://localhost:3010/responses").then((response) => {
+  //     setResponseList(response.data);
+  //   });
+  // };
 
   const addResponse = () => {
-    Axios.post("http://localhost:3010/input/create", {
+    Axios.post("https://persona-collabwall.herokuapp.com/api/insert", {
       response: response,
     }).then(() => {
       console.log("success");
-    });
-  };
-
-  const getResponses = () => {
-    Axios.get("http://localhost:3010/responses").then((response) => {
-      setResponseList(response.data);
     });
   };
 
@@ -41,71 +59,33 @@ const Input = (props) => {
     setResponse("");
   };
 
-  const mouseCool = (event) => {
-    let rect = event.currentTarget.getBoundingClientRect();
-    let x = event.clientX - rect.left;
-    let y = event.clientY - rect.top;
-    // Fix it a bit to make it more intuitive
-    return [x, y];
-  };
-
-  const addCircle = (event) => {
-    let [x, y] = mouseCool(event);
-
-    console.log(x + " " + y);
-    const divstyle = { position: "absolute", top: y + "px", left: x + "px" };
-
-    var newCircle = (
-      <div key={circles.length + 1} className="circle" style={divstyle}></div>
-    );
-    // update the array of circles; you HAVE to spread the current array
-    // as 'circles' is immutible and will not accept new info
-    let allCircles;
-
-    // Only create circles when it meets this limit, otherwise do not add
-    if (circles.length < 5) {
-      allCircles = [...circles, newCircle];
-    } else {
-      allCircles = [...circles];
-    }
-
-    if (circles.length == 5) {
-      allCircles.shift();
-    }
-
-    // update 'circles'
-    setCircles(allCircles);
-  };
-
-  console.log(circles);
-
   return (
-    // <div className="Input" onClick={addCircle}>
-    //   <div class="containerA w-100">{circles}</div>
     <div className="Input">
       <div class="containerA w-100" id="containerA"></div>
-      <div class="container containerB w-50 m-auto unselectable">
+      <div class="container align-center w-100 containerB unselectable">
         <div class="row">
           <div class="col-12">
             <h1>PERSONA</h1>
           </div>
-          <div class="message col-12 m-auto align-center">
+          <div class="message col-sm-8 col-md-10 align-center">
             <span>
               Type in an anonymous message to stick to the wall! Style it too to
               make it yours
             </span>
           </div>
         </div>
-        {/* <div class="row">
-        </div> */}
-        <div class="row">
-          <div class="col-12">
+        <div class="row hey">
+          <div class="col-2 col-md-2 style-select">
+            <button onClick="pressedRight()">
+              <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" />
+            </button>
+          </div>
+          <div class="col-8 col-md-8 justify-center">
             <form onSubmit={handleSubmit}>
+              {/* <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" /> */}
               <div class="align-middle">
-                <div class="style-select">
-                  <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" />
-                </div>
                 <textarea
+                  id="hello"
                   name="text"
                   rows="5"
                   cols="10"
@@ -117,21 +97,27 @@ const Input = (props) => {
                     setResponse(event.target.value);
                   }}
                 ></textarea>
-                <div class="style-select">
-                  <img src="https://img.icons8.com/material-rounded/48/000000/chevron-right.png" />
-                </div>
               </div>
-              {/* <input
-                type="text"
-                id="userinput"
-                placeholder="Type in something to send to the wall"
-              /> */}
-              <br></br>
+              <div class="btn-group">
+                <button onClick="setNone()">None</button>
+                <button onClick="setiMessage()">iMessage</button>
+                <button onClick="setInsta()">Insta</button>
+                <button onClick="setNote()">Note</button>
+              </div>
+
+
               <button type="submit" onClick={addResponse}>
                 <img src="https://img.icons8.com/ios/50/FFFFFF/circled-up-2.png" />
                 {/* <i class="bi bi-arrow-up-circle"></i> */}
               </button>
+              {/* <Link to="/wall">View the Wall</Link> */}
+              {/* <img src="https://img.icons8.com/material-rounded/48/000000/chevron-left.png" /> */}
             </form>
+          </div>
+          <div class="col-2 col-md-2 style-select">
+            <button id="rightBtn">
+              <img src="https://img.icons8.com/material-rounded/48/000000/chevron-right.png" />
+            </button>
           </div>
         </div>
       </div>

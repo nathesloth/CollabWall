@@ -1,42 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
 body {
   height: 100vh;
@@ -52,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto;
-  display: flex;
+  /* display: flex; */
 }
 
 h1 {
@@ -88,11 +50,16 @@ circle,
 #script-tag {
   height: 100vh;
   width: 100%;
-  /* z-index: 1; */
-  z-index: -1;
   position: fixed;
   top: 0;
   left: 0;
+}
+.Wall .containerA {
+  z-index: 1;
+}
+
+.Input .containerA {
+  z-index: -1;
 }
 
 .containerB {
@@ -127,11 +94,41 @@ circle,
 .containerB {
   background-color: #FAF8F8;
   box-shadow: 0px 0px 40px 40px #FAF8F8;
+  /* width: 70% !important; */
+}
+
+@media only screen and (max-width: 600px) {
+  .Input .containerB .message {
+    width:80% !important;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .Input .containerB {
+    width: 35em !important;
+    align-items: center;
+  }
+
+  .Input .containerB textarea,
+  .Input .containerB .style-select {
+    height: 20vh;
+  }
+  .Input .containerB .message {
+    width: 50% !important;
+  }
 }
 
 .style-select {
-  height: 40px;
-  background-color: pink;
-  width: fit-content;
-  /* vertical-align: middle; */
+  /* background-color: pink; */
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.style-select img {
+  vertical-align: middle;
+  height: 30px;
+  transform: translate(0, 50%);
 }
