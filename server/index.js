@@ -11,9 +11,9 @@ const mysql = require("mysql");
 //   database: "persona",
 // });
 
-const db = mysql.createConnection({
-  user: "b9d291ccf00bfa",
+const db = mysql.createPool({
   host: "us-cdbr-east-06.cleardb.net",
+  user: "b9d291ccf00bfa",
   password: "d31a854d",
   database: "heroku_02cfd9a3bf546ef",
 });
